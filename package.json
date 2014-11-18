@@ -1,0 +1,50 @@
+{
+  "name": "array-compare",
+  "description": "shallow array diff by object equality or id",
+  "author": {
+    "name": "Will Hoag",
+    "email": "dev@willhoag.com",
+    "url": "https://github.com/willhoag"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/willhoag/array-compare.git"
+  },
+  "bugs": {
+    "url": "https://github.com/willhoag/array-compare/issues"
+  },
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/karma/bin/karma start",
+    "prepublish": "./node_modules/browserify/bin/cmd.js src/index.coffee -o index.js"
+  },
+  "keywords": [
+    "diff",
+    "array",
+    "compare",
+    "javascript"
+  ],
+  "dependencies": {
+    "mout": "~0.11.0"
+  },
+  "devDependencies": {
+    "browserify": "~4.2.0",
+    "coffee-script": "^1.8.0",
+    "coffeeify": "~0.6.0",
+    "karma": "~0.12.17",
+    "karma-browserify": "^1.0.0",
+    "karma-chai-plugins": "~0.2.0",
+    "karma-coffee-preprocessor": "^0.2.1",
+    "karma-jasmine": "~0.1.4",
+    "karma-mocha": "~0.1.1",
+    "karma-mocha-reporter": "~0.2.2",
+    "karma-phantomjs-launcher": "~0.1.1"
+  },
+  "browserify": {
+    "transform": [
+      "coffeeify"
+    ]
+  },
+  "license": "MIT"
+}
