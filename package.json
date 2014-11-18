@@ -17,7 +17,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/karma/bin/karma start",
-    "prepublish": "./node_modules/browserify/bin/cmd.js src/index.coffee -o index.js"
+    "prepublish": "./node_modules/coffee-script/bin/coffee -b -o ./ -c ./src"
   },
   "keywords": [
     "diff",

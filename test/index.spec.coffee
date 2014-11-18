@@ -1,6 +1,6 @@
 'use strict'
 
-arrayCompare = require('../src/index')
+arrayCompare = require('../index.js')
 
 describe 'array-compare', ->
 
