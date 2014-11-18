@@ -13,7 +13,7 @@
   "bugs": {
     "url": "https://github.com/willhoag/array-compare/issues"
   },
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/karma/bin/karma start",
