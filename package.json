@@ -1,6 +1,6 @@
 {
   "name": "array-compare",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "shallow array diff by object equality or id",
   "main": "index.js",
   "repository": {
