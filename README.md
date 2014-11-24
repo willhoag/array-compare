@@ -1,10 +1,11 @@
 array-compare
 =====
 
-[![NPM](https://nodei.co/npm/array-compare.png)](https://nodei.co/npm/array-compare/)
-
 Performs a shallow diff on a set of arrays returning found, missing and added pairs. It works by searching the second array for the items of the first comparing by object equality. Optionally, you can provided a third parameter which will be used to identify objects by their id.
 
+[![NPM](https://nodei.co/npm/array-compare.png)](https://nodei.co/npm/array-compare/)
+
+[![build status](https://secure.travis-ci.org/willhoag/array-compare.png)](http://travis-ci.org/willhoag/array-compare)
 
 EXAMPLE
 ====
@@ -45,11 +46,6 @@ arrayCompare({ a: arrayA, b: arrayB, id: 'sandwich' });
 //   }]
 // }
 ```
-
-INSTALLATION
-===
-`$ npm install array-compare --save`
----
 
 NOTES
 ===
