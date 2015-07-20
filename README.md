@@ -5,7 +5,9 @@ Performs a shallow diff on a set of arrays returning found, missing and added pa
 
 [![NPM](https://nodei.co/npm/array-compare.png)](https://nodei.co/npm/array-compare/)
 
-[![build status](https://secure.travis-ci.org/willhoag/array-compare.png)](http://travis-ci.org/willhoag/array-compare)
+[![build status](https://img.shields.io/travis/willhoag/array-compare.svg)](http://travis-ci.org/willhoag/array-compare)
+[![npm](https://img.shields.io/npm/v/array-compare.svg)](http://travis-ci.org/willhoag/array-compare)
+[![npm](https://img.shields.io/bower/v/array-compare.svg)](http://travis-ci.org/willhoag/array-compare)
 
 EXAMPLE
 ====
@@ -50,17 +52,6 @@ arrayCompare({ a: arrayA, b: arrayB, id: 'sandwich' });
 NOTES
 ===
 It's not nearly as useful for basic arrays filled with numbers or strings, but will work. Also, it doesn't currently provide any indication of a change in order, though it should be trivial to add as the code already has access to both a and b indexes thanks to [Mout.js](http://moutjs.com) and its [findIndex](http://moutjs.com/docs/latest/array.html#findIndex) function.
-
-UPDATING
-===
-```bash
-npm run build
-git add ./dist
-git commit -m 'new bower update'
-git tag -a v0.0.2 -m "Release version 0.0.2"
-git push origin master --tags
-npm update
-```
 
 LICENSE
 =======
