@@ -20,7 +20,6 @@
     "karma": "~0.12.17",
     "karma-browserify": "^1.0.0",
     "karma-chai-plugins": "~0.2.0",
-    "karma-coffee-preprocessor": "^0.2.1",
     "karma-jasmine": "~0.1.4",
     "karma-mocha": "~0.1.1",
     "karma-mocha-reporter": "~0.2.2",
@@ -33,7 +32,7 @@
     ]
   },
   "scripts": {
-    "test": "karma start",
+    "test": "npm run prepublish && karma start",
     "prepublish": "coffee -b -o ./ -c ./src",
     "build": "browserify --standalone array-compare ./src/index.coffee | tee ./dist/array-compare.js | uglifyjs > ./dist/array-compare.min.js"
   },
