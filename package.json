@@ -24,16 +24,18 @@
     "karma-jasmine": "~0.1.4",
     "karma-mocha": "~0.1.1",
     "karma-mocha-reporter": "~0.2.2",
-    "karma-phantomjs-launcher": "~0.1.1"
-  },
-  "scripts": {
-    "test": "./node_modules/karma/bin/karma start",
-    "prepublish": "./node_modules/coffee-script/bin/coffee -b -o ./ -c ./src"
+    "karma-phantomjs-launcher": "~0.1.1",
+    "uglify-js": "^2.4.23"
   },
   "browserify": {
     "transform": [
       "coffeeify"
     ]
+  },
+  "scripts": {
+    "test": "karma start",
+    "prepublish": "coffee -b -o ./ -c ./src",
+    "build": "browserify --standalone array-compare ./src/index.coffee | tee ./dist/array-compare.js | uglifyjs > ./dist/array-compare.min.js"
   },
   "keywords": [
     "diff",

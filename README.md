@@ -1,7 +1,7 @@
 array-compare
 =====
 
-Performs a shallow diff on a set of arrays returning found, missing and added pairs. It works by searching the second array for the items of the first comparing by object equality. Optionally, you can provided a third parameter which will be used to identify objects by their id.
+Performs a shallow diff on a set of arrays returning found, missing and added pairs. It works by searching the second array for the items of the first comparing by object equality. Optionally, you can provided a third parameter which will be used to identify objects by their id. Array-compare is also UMD compatible.
 
 [![NPM](https://nodei.co/npm/array-compare.png)](https://nodei.co/npm/array-compare/)
 
@@ -50,6 +50,17 @@ arrayCompare({ a: arrayA, b: arrayB, id: 'sandwich' });
 NOTES
 ===
 It's not nearly as useful for basic arrays filled with numbers or strings, but will work. Also, it doesn't currently provide any indication of a change in order, though it should be trivial to add as the code already has access to both a and b indexes thanks to [Mout.js](http://moutjs.com) and its [findIndex](http://moutjs.com/docs/latest/array.html#findIndex) function.
+
+UPDATING
+===
+```bash
+npm run build
+git add ./dist
+git commit -m 'new bower update'
+git tag -a v0.0.2 -m "Release version 0.0.2"
+git push origin master --tags
+npm update
+```
 
 LICENSE
 =======
