@@ -1,7 +1,7 @@
 'use strict'
 
-findIndex = require('mout/array/findIndex')
 isObject = require('mout/lang/isObject')
+findIndex = require('mout/array/findIndex')
 
 arrayCompare = (a, b, id) ->
 
@@ -17,16 +17,17 @@ arrayCompare = (a, b, id) ->
   # loop through a
   for aItem, aIndex in a
 
-    search = {}
+    bIndex = -1
 
-    # use id or item for search
+    # compare by key
     if id
+      search = {}
       search[id] = aItem[id]
-    else
-      search = aItem
+      bIndex = findIndex(bCopy, search)
 
-    # find item index
-    bIndex = findIndex(b, search)
+    # compare by reference
+    else
+      bIndex = bCopy.indexOf(aItem)
 
     # if found
     if bIndex isnt -1
