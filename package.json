@@ -24,6 +24,7 @@
     "karma-mocha": "~0.1.1",
     "karma-mocha-reporter": "~0.2.2",
     "karma-phantomjs-launcher": "~0.1.1",
+    "onchange": "^3.0.2",
     "uglify-js": "^2.4.23"
   },
   "browserify": {
@@ -31,7 +32,9 @@
       "coffeeify"
     ]
   },
+  "engine": "node 0.10",
   "scripts": {
+    "test:watch": "onchange 'src/*.coffee' 'test/*.spec.coffee' -- npm test",
     "test": "npm run prepublish && karma start",
     "prepublish": "coffee -b -o ./ -c ./src",
     "build": "browserify --standalone array-compare ./src/index.coffee | tee ./dist/array-compare.js | uglifyjs > ./dist/array-compare.min.js"
